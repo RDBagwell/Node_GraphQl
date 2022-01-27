@@ -30,15 +30,16 @@ function getProductsById(id) {
 }
 
 function addNewProduct(id, description, price) {
-    const newProduct = {
-      id,
-      price,
-      description,
-      reviews: []
-    };
-    products.push(newProduct);
-    return newProduct;
-  }
+  const newProduct = {
+    id,
+    price,
+    description,
+    reviews: []
+  };
+
+  products.push(newProduct);
+  return newProduct;
+}
   
   function addNewProductReview(id, rating, comment) {
     const matchedProduct = getProductsById(id);
